@@ -30,3 +30,27 @@ class student(pepole):
 s= student('ken',20,60,3)
 s.speak()
 
+
+class speaker():
+    topic = ''
+    name = ''
+    
+    def __init__(self,n,t):
+        self.name = n
+        self.topic = t
+    
+    def speak(self):
+        print ("I am %s, I am a speaker ! My topic is %s" %(self.name,self.topic))
+
+
+class sample (speaker,student):
+        a = ''
+        
+        def __init__ (self,n,a,w,g,t):
+                student.__init__(self,n,a,w,g)
+                speaker.__init__(self,n,t)
+
+
+test = sample ("Tim",25,80,4,"Python")
+test.speak()
+
